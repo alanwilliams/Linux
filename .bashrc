@@ -116,3 +116,30 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#########
+# Aliases
+#########
+
+alias ll="ls -lhA --color=auto --group-directories-first"
+alias ls="ls -CF --color=auto --group-directories-first"
+## Show hidden files ##
+alias l.='ls -d .* --color=auto'
+#
+alias fhere="find . -name "
+alias ps="ps auxf"
+alias mkdir="mkdir -pv"
+alias wget="wget -c"
+alias histg="history | grep"
+alias top="htop"
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+# distro specific  - Debian / Ubuntu and friends #
+# install with apt-get
+alias apt-get="sudo apt-get"
+alias updatey="sudo apt-get --yes"
+ 
+ # update on one command 
+ alias update='sudo apt-get update && sudo apt-get upgrade'
